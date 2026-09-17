@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import AboutCard from "./components/AboutCard";
 
 import CraftGallery from "./components/CraftGallery";
+import Experience from "./components/Experience";
 
 export default function App() {
   return (
@@ -19,7 +20,9 @@ export default function App() {
       <section id="craft">
         <CraftGallery />
       </section>
-      <section id="experience"></section>
+      <section id="experience">
+        <Experience />
+      </section>
       <section id="portfolio"></section>
       <Footer />
     </div>
