@@ -8,10 +8,10 @@
   "avatar": "/assets/svg/avatar.svg",
   "heroTagline": "A video editor building on stories. Crafting cuts, motion & moments.",
   "heroImages": {
-    "photo": "",
+    "photo": "https://res.cloudinary.com/xjo36sha/image/upload/v1789657377/WhatsApp_Image_2026-09-17_at_8.32.30_PM.jpg",
     "cautionSign": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652418/Gemini_Generated_Image_94d4hh94d4hh94d4_1.png",
     "computer": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652565/Gemini_Generated_Image_wyfanqwyfanqwyfa_1.png",
-    "coffee": "",
+    "coffee": "https://res.cloudinary.com/xjo36sha/image/upload/v1789657174/Gemini_Generated_Image_264loq264loq264l_1.png",
     "cabinet": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652687/cabinet_closed.png",
     "nameTag": "https://res.cloudinary.com/xjo36sha/image/upload/v1789653426/ChatGPT_Image_Sep_17_2026_07_26_46_PM.png",
     "notepad": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652701/yellow-paper-bg.png",
@@ -24,5 +24,15 @@
   "skills": ["Motion Graphics", "Sound Design", "Color Correction", "Video Formats & Codecs", "Digital Asset Management", "Workflow Automation (AE Scripting)", "Documentary Storytelling", "Audience Retention Strategy", "Platform Optimization"],
   "education": [
     { "degree": "Bachelor of Arts (B.A.) Programme", "institution": "Delhi University School Of Open Learning", "year": "2021-2025" }
+  ],
+  "craftItems": [
+    { "id": "instamart", "title": "Instamart", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/groww-resume-bg_1.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/1NfTRB4gSOgGFePg6QU8ROHLROo6NcdPG/view?usp=sharing" },
+    { "id": "comet", "title": "Comet", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/otherwork-bg_1.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/1-4b6rMNgsVblb0O5fQuuFXEaDrvOHnxt/view?usp=sharing" },
+    { "id": "blinkit", "title": "Blinkit", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/Gemini_Generated_Image_l6l4aml6l4aml6l4_1.png", "type": "video", "vertical": false, "link": "https://drive.google.com/file/d/1Zp4nM08DpwVOKgevURLIdfdsX9adBK1b/view?usp=sharing" },
+    { "id": "mustang", "title": "Mustang", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/groww-resume-bg.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/11DDAWXSNuCEkiwTpqnPJzDmh6OhqnApF/view?usp=sharing" },
+    { "id": "zomato", "title": "Zomato", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/Gemini_Generated_Image_m6co3km6co3km6co.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/1rA5hJBSGUkQZl5yAbxx3DR5XEWewQ_HT/view?usp=sharing" },
+    { "id": "groww", "title": "Groww", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/Gemini_Generated_Image_qlq70lqlq70lqlq7_1.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/1I28herR1GR9vum7fxdPIvIihMSdGSMGK/view?usp=sharing" },
+    { "id": "otherwork", "title": "Other work", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655006/zomato-bg.png", "type": "video", "vertical": true, "link": "https://drive.google.com/file/d/10VqFkdFYjznC3OSjcj2_L-YG1-v1KuG_/view?usp=sharing" },
+    { "id": "resume", "title": "Resume", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/groww-resume-bg_1.png", "type": "pdf", "vertical": false, "link": "https://drive.google.com/file/d/1oAESTbEplo0x-eKdaSqJruCYpxRqPTmR/view?usp=sharing" }
   ]
 }

@@ -9,14 +9,19 @@ import {
   heroImages,
 } from "../data/profile.json";
 
-function Sticker({ src, label, className, rotate = 0 }) {
+function Sticker({ src, label, className, rotate = 0, fit = "contain", zoom = 1, grayscale = false, rounded = false }) {
   return (
     <div
-      className={`absolute ${className}`}
+      className={`absolute overflow-hidden ${rounded ? "rounded-[2rem]" : ""} ${className}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
       {src ? (
-        <img src={src} alt={label} className="w-full h-full object-contain drop-shadow-xl" />
+        <img
+          src={src}
+          alt={label}
+          className={`w-full h-full object-${fit} drop-shadow-xl ${grayscale ? "grayscale" : ""}`}
+          style={zoom !== 1 ? { transform: `scale(${zoom})` } : undefined}
+        />
       ) : (
         <div className="w-full h-full min-h-16 rounded-lg border-2 border-dashed border-black/20 bg-black/[0.02] flex items-center justify-center">
           <span className="text-[10px] uppercase tracking-wide text-black/30 px-2 text-center">
@@ -40,18 +45,19 @@ export default function Hero() {
       <Sticker
         src={heroImages.photo}
         label="Photo"
-        rotate={5}
-        className="left-[25%] top-[5%] w-[14%] h-[24%] hidden md:block"
+        rotate={-8}
+        rounded
+        className="left-[27%] top-[1%] w-[16%] h-[27%] hidden md:block"
       />
       <Sticker
         src={heroImages.computer}
         label="Computer"
-        className="left-[37.6%] top-[13.2%] w-[28.8%] h-[57.6%] hidden md:block"
+        className="left-[35%] top-[8%] w-[34%] h-[62%] hidden md:block"
       />
       <Sticker
         src={heroImages.coffee}
         label="Coffee"
-        className="left-[25%] top-[44%] w-[8%] h-[11%] hidden md:block"
+        className="left-[23.5%] top-[41%] w-[12%] h-[17%] hidden md:block"
       />
       <Sticker
         src={heroImages.cabinet}
@@ -73,7 +79,7 @@ export default function Hero() {
       <Sticker
         src={heroImages.welcomeMat}
         label="Welcome mat"
-        className="left-[10.9%] top-[58.7%] w-[76.2%] h-[51.6%] hidden md:block"
+        className="left-[8.9%] top-[60%] w-[80.2%] h-[55.6%] hidden md:block"
       />
 
       <motion.div

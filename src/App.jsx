@@ -2,7 +2,8 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import AboutCard from "./components/AboutCard";
-import BadgeCallout from "./components/BadgeCallout";
+
+import CraftGallery from "./components/CraftGallery";
 
 export default function App() {
   return (
@@ -14,8 +15,9 @@ export default function App() {
       <section id="about">
         <AboutCard />
       </section>
-      <section id="badge">
-        <BadgeCallout />
+      
+      <section id="craft">
+        <CraftGallery />
       </section>
       <section id="experience"></section>
       <section id="portfolio"></section>
