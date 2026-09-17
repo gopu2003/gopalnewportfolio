@@ -4,13 +4,25 @@
   "location": "New Delhi, India",
   "openToWork": true,
   "experienceYears": "3",
-  "bio": "",
+  "bio": "Detail-oriented and technically proficient Video Editor with extensive experience managing end-to-end post-production workflows for global clients, including US-based companies. Specializing in documentary storytelling, motion graphics, and audience retention optimization. Adept at leveraging advanced scripting and custom tool development to streamline digital asset management and production efficiency.",
   "avatar": "/assets/svg/avatar.svg",
-  "externalLink": "",
-  "tools": [Adobe Premiere Pro, Adobe After Effects, Adobe Photoshop, Adobe Illustrator, Adobe Audition, Final Cut Pro],
-  "skills": ["Video Editing", "Motion Graphics", "Color Grading", "Visual Effects", "Storytelling", "Animation"],
+  "heroTagline": "A video editor building on stories. Crafting cuts, motion & moments.",
+  "heroImages": {
+    "photo": "",
+    "cautionSign": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652418/Gemini_Generated_Image_94d4hh94d4hh94d4_1.png",
+    "computer": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652565/Gemini_Generated_Image_wyfanqwyfanqwyfa_1.png",
+    "coffee": "",
+    "cabinet": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652687/cabinet_closed.png",
+    "nameTag": "https://res.cloudinary.com/xjo36sha/image/upload/v1789653426/ChatGPT_Image_Sep_17_2026_07_26_46_PM.png",
+    "notepad": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652701/yellow-paper-bg.png",
+    "welcomeMat": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652853/card-shadow-895.png"
+  },
+  "email": "goplee8700341953@gmail.com",
+  "phone": "+91 8700341953",
+  "externalLink": "https://gopaledits.netlify.app",
+  "tools": ["Adobe Premiere Pro", "Adobe After Effects", "React", "Python"],
+  "skills": ["Motion Graphics", "Sound Design", "Color Correction", "Video Formats & Codecs", "Digital Asset Management", "Workflow Automation (AE Scripting)", "Documentary Storytelling", "Audience Retention Strategy", "Platform Optimization"],
   "education": [
-    { "degree": "Bachelor of Arts ", "institution": "University of Delhi", "year": "2021-2025" }
-    
+    { "degree": "Bachelor of Arts (B.A.) Programme", "institution": "Delhi University School Of Open Learning", "year": "2021-2025" }
   ]
 }

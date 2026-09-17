@@ -1,13 +1,22 @@
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import AboutCard from "./components/AboutCard";
+import BadgeCallout from "./components/BadgeCallout";
 
 export default function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-white text-black min-h-screen">
       <Nav />
-      <section id="hero"></section>
-      <section id="about"></section>
-      <section id="badge"></section>
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <AboutCard />
+      </section>
+      <section id="badge">
+        <BadgeCallout />
+      </section>
       <section id="experience"></section>
       <section id="portfolio"></section>
       <Footer />
