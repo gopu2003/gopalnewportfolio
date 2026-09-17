@@ -1,0 +1,16 @@
+﻿{
+  "name": "Gopal Rawat",
+  "role": "Video Editor",
+  "location": "New Delhi, India",
+  "openToWork": true,
+  "experienceYears": "3",
+  "bio": "",
+  "avatar": "/assets/svg/avatar.svg",
+  "externalLink": "",
+  "tools": [Adobe Premiere Pro, Adobe After Effects, Adobe Photoshop, Adobe Illustrator, Adobe Audition, Final Cut Pro],
+  "skills": ["Video Editing", "Motion Graphics", "Color Grading", "Visual Effects", "Storytelling", "Animation"],
+  "education": [
+    { "degree": "Bachelor of Arts ", "institution": "University of Delhi", "year": "2021-2025" }
+    
+  ]
+}
