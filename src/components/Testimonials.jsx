@@ -50,9 +50,7 @@ function TestimonialCard({ item, rotate, onClick }) {
               </div>
             )}
             <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md">
-                <span className="ml-0.5 h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-black" />
-              </span>
+              
             </div>
           </div>
         </button>

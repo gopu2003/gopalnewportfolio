@@ -13,16 +13,14 @@ const BG_IMAGE =
 
 function AboutText() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-center gap-8 px-6 text-center"
-    >
+    <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-center gap-8 px-6 text-center">
       {paragraphs.map((p, i) => (
-        <p
+        <motion.p
           key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.7, delay: i * 0.2, ease: "easeOut" }}
           className={
             i === 0
               ? "font-[Playfair_Display] text-3xl italic font-semibold leading-snug tracking-tight text-white md:text-5xl [text-wrap:balance]"
@@ -30,9 +28,9 @@ function AboutText() {
           }
         >
           {p}
-        </p>
+        </motion.p>
       ))}
-    </motion.div>
+    </div>
   );
 }
 
@@ -59,7 +57,7 @@ export default function AboutCard() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${BG_IMAGE})` }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/55" />
         <div className="grain-overlay pointer-events-none absolute inset-0" />
         <AboutText />
       </section>
@@ -77,7 +75,7 @@ export default function AboutCard() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${BG_IMAGE})` }}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/55" />
           <div className="grain-overlay pointer-events-none absolute inset-0" />
         </motion.div>
         <AboutText />

@@ -6,11 +6,13 @@ import AboutCard from "./components/AboutCard";
 import CraftGallery from "./components/CraftGallery";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
+import FloatingWhatsapp from "./components/FloatingWhatsapp";
 
 export default function App() {
   return (
     <div className="bg-white text-black min-h-screen">
       <Nav />
+      <FloatingWhatsapp />
       <section id="hero">
         <Hero />
       </section>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
 import { craftItems } from "../data/profile.json";
 import { driveEmbedUrl, driveThumbnailUrl } from "../lib/drive";
 
@@ -24,6 +24,7 @@ function PosterCard({ item, rotate, onClick }) {
             <img
               src={thumbnail}
               alt={`${item.title} preview`}
+              referrerPolicy="no-referrer"
               className="h-full w-full object-cover"
               onError={(e) => {
                 e.currentTarget.parentElement.style.display = "none";
@@ -78,8 +79,14 @@ export default function CraftGallery() {
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], [range.start, -range.end]);
-  const travel = range.start + range.end;
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 45,
+    damping: 20,
+    mass: 0.6,
+  });
+
+  const x = useTransform(smoothProgress, [0, 1], [range.start, -range.end]);
+  const travel = (range.start + range.end) * 1.8;
 
   return (
     <motion.div

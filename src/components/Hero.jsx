@@ -9,19 +9,33 @@ import {
   heroImages,
 } from "../data/profile.json";
 
-function Sticker({ src, label, className, rotate = 0, fit = "contain", zoom = 1, grayscale = false, rounded = false }) {
+const softShadowFilter =
+  "drop-shadow(0 2px 3px rgba(10,10,20,0.28)) drop-shadow(0 20px 22px rgba(10,10,20,0.30)) drop-shadow(0 55px 60px rgba(10,10,20,0.24))";
+
+function Sticker({ src, label, className, rotate = 0, fit = "contain", zoom = 1, grayscale = false, rounded = false, children }) {
   return (
     <div
-      className={`absolute overflow-hidden ${rounded ? "rounded-[2rem]" : ""} ${className}`}
-      style={{ transform: `rotate(${rotate}deg)` }}
+      className={`absolute ${rounded ? "overflow-hidden rounded-[2rem]" : ""} ${className}`}
+      style={{
+        transform: `rotate(${rotate}deg)`,
+        boxShadow: rounded
+          ? "0 2px 3px rgba(10,10,20,0.28), 0 20px 22px rgba(10,10,20,0.30), 0 55px 60px rgba(10,10,20,0.24)"
+          : undefined,
+      }}
     >
       {src ? (
-        <img
-          src={src}
-          alt={label}
-          className={`w-full h-full object-${fit} drop-shadow-xl ${grayscale ? "grayscale" : ""}`}
-          style={zoom !== 1 ? { transform: `scale(${zoom})` } : undefined}
-        />
+        <>
+          <img
+            src={src}
+            alt={label}
+            className={`w-full h-full object-${fit} ${grayscale ? "grayscale" : ""}`}
+            style={{
+              filter: rounded ? undefined : softShadowFilter,
+              ...(zoom !== 1 ? { transform: `scale(${zoom})` } : {}),
+            }}
+          />
+          {children}
+        </>
       ) : (
         <div className="w-full h-full min-h-16 rounded-lg border-2 border-dashed border-black/20 bg-black/[0.02] flex items-center justify-center">
           <span className="text-[10px] uppercase tracking-wide text-black/30 px-2 text-center">
@@ -40,7 +54,7 @@ export default function Hero() {
         src={heroImages.cautionSign}
         label="Caution sign"
         rotate={-12}
-        className="left-[0%] top-[16%] w-[24%] h-[60%] hidden md:block"
+        className="left-[-10%] top-[16%] w-[34%] h-[83%] hidden md:block"
       />
       <Sticker
         src={heroImages.photo}
@@ -52,12 +66,12 @@ export default function Hero() {
       <Sticker
         src={heroImages.computer}
         label="Computer"
-        className="left-[33%] top-[11%] w-[28%] h-[48%] hidden md:block"
+        className="left-[33%] top-[11%] w-[31.5%] h-[57%] hidden md:block"
       />
       <Sticker
         src={heroImages.coffee}
         label="Coffee"
-        className="left-[22.5%] top-[38%] w-[10%] h-[14%] hidden md:block"
+        className="left-[20.5%] top-[38%] w-[13%] h-[20%] hidden md:block"
       />
       <Sticker
         src={heroImages.cabinet}
@@ -67,19 +81,59 @@ export default function Hero() {
       <Sticker
         src={heroImages.nameTag}
         label="Name tag"
-        rotate={-3}
+        rotate={-8}
         className="left-[68%] top-[24%] w-[20%] h-[19%] hidden md:block"
       />
       <Sticker
         src={heroImages.notepad}
         label="Notepad"
-        rotate={2}
-        className="left-[85%] top-[39%] w-[10%] h-[21%] hidden md:block"
-      />
+        rotate={2.5}
+        className="left-[85%] top-[59%] w-[10%] h-[23%] hidden md:block"
+      >
+        <div
+          className="pointer-events-none absolute left-[22%] right-[6%] top-[15%] flex flex-col gap-[5%] text-emerald-700"
+          style={{ fontFamily: "'Caveat', cursive" }}
+        >
+          <div className="flex items-baseline gap-[5%] whitespace-nowrap">
+            <span className="shrink-0" style={{ fontSize: "clamp(8px, 0.85vw, 12px)" }}>
+              ✓
+            </span>
+            <span
+              className="leading-none uppercase tracking-tight"
+              style={{ fontSize: "clamp(7px, 0.72vw, 10px)" }}
+            >
+              Curious
+            </span>
+          </div>
+          <div className="flex items-baseline gap-[5%] whitespace-nowrap pl-[10%]">
+            <span className="shrink-0" style={{ fontSize: "clamp(8px, 0.85vw, 12px)" }}>
+              ✓
+            </span>
+            <span
+              className="leading-none uppercase tracking-tight"
+              style={{ fontSize: "clamp(7px, 0.72vw, 10px)" }}
+            >
+              Learning new things
+            </span>
+          </div>
+          <div className="flex items-baseline gap-[5%] whitespace-nowrap text-black">
+            <span
+              className="shrink-0 inline-block rounded-full border border-black"
+              style={{ width: "0.55em", height: "0.55em", fontSize: "clamp(8px, 0.85vw, 12px)" }}
+            />
+            <span
+              className="leading-none uppercase tracking-tight"
+              style={{ fontSize: "clamp(7px, 0.72vw, 10px)" }}
+            >
+              Hired
+            </span>
+          </div>
+        </div>
+      </Sticker>
       <Sticker
         src={heroImages.welcomeMat}
         label="Welcome mat"
-        className="left-[33%] bottom-[4%] w-[30%] aspect-[2.3/2] hidden md:block"
+        className="left-[33%] bottom-[-5%] w-[30%] aspect-[2.3/2.1] hidden md:block"
       />
 
       <motion.div

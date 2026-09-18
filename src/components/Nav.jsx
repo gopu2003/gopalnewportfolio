@@ -96,7 +96,7 @@ export default function Nav() {
           </a>
           <a
             href={`mailto:${email}`}
-            className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-black/80"
+            className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white shadow-[0_8px_16px_rgba(0,0,0,0.18)] transition-colors hover:bg-black/80"
           >
             Let's talk
           </a>

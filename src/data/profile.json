@@ -15,7 +15,8 @@
     "cabinet": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652687/cabinet_closed.png",
     "nameTag": "https://res.cloudinary.com/xjo36sha/image/upload/v1789653426/ChatGPT_Image_Sep_17_2026_07_26_46_PM.png",
     "notepad": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652701/yellow-paper-bg.png",
-    "welcomeMat": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652853/card-shadow-895.png"
+    "welcomeMat": "https://res.cloudinary.com/xjo36sha/image/upload/v1789652853/card-shadow-895.png",
+    "footerClouds": "https://res.cloudinary.com/xjo36sha/image/upload/v1789736129/Gemini_Generated_Image_mg19l8mg19l8mg19.png"
   },
   "email": "goplee8700341953@gmail.com",
   "phone": "+91 8700341953",
@@ -38,9 +39,9 @@
     { "id": "resume", "title": "Resume", "image": "https://res.cloudinary.com/xjo36sha/image/upload/v1789655005/groww-resume-bg_1.png", "type": "pdf", "vertical": false, "link": "https://drive.google.com/file/d/1oAESTbEplo0x-eKdaSqJruCYpxRqPTmR/view?usp=sharing" }
   ],
   "testimonials": [
-    { "id": "t1", "name": "Ruchi Thakur", "role": "Tech Content Creator", "quote": "Work Process has been Soo Smooth", "link": "https://drive.google.com/file/d/1eA8UQ6m-l6utHCWwyErBLrpp9j1ZHHzv/view?usp=sharing" },
-    { "id": "t2", "name": "Pari Sharma", "role": "Social Media Influencer", "quote": "Quality of work is excellent.", "link": "https://drive.google.com/file/d/1heXC0BHmTKneQOZcyOSgO5wtWFqI6ev1/view?usp=sharing" },
-    { "id": "t3", "name": "Shubhang", "role": "Fitness Content Creator", "quote": "Applies unlimited num of changes", "link": "https://drive.google.com/file/d/1fGHDOsJrB9eaLS-bVpwwGy25tgY-Qb6J/view?usp=sharing" },
-    { "id": "t4", "name": "Vanshika Rawat", "role": "Fitness Content Creator", "quote": "Understands the instruction in single go", "link": "https://drive.google.com/file/d/1TQlWjRANCwKDPpR9dn1FwarGcg7-CCvr/view?usp=sharing" }
+    { "id": "t1", "name": "Ruchi Thakur", "role": "Tech Content Creator", "quote": "~ Work Process has been Soo Smooth", "link": "https://drive.google.com/file/d/1eA8UQ6m-l6utHCWwyErBLrpp9j1ZHHzv/view?usp=sharing" },
+    { "id": "t2", "name": "Pari Sharma", "role": "Social Media Influencer", "quote": "~ Quality of work is excellent.", "link": "https://drive.google.com/file/d/1heXC0BHmTKneQOZcyOSgO5wtWFqI6ev1/view?usp=sharing" },
+    { "id": "t3", "name": "Shubhang", "role": "Fitness Content Creator", "quote": "~ Applies unlimited num of changes", "link": "https://drive.google.com/file/d/1fGHDOsJrB9eaLS-bVpwwGy25tgY-Qb6J/view?usp=sharing" },
+    { "id": "t4", "name": "Vanshika Rawat", "role": "Fitness Content Creator", "quote": "~ Understands the instruction in single go", "link": "https://drive.google.com/file/d/1TQlWjRANCwKDPpR9dn1FwarGcg7-CCvr/view?usp=sharing" }
   ]
 }
