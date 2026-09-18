@@ -5,6 +5,7 @@ import AboutCard from "./components/AboutCard";
 
 import CraftGallery from "./components/CraftGallery";
 import Experience from "./components/Experience";
+import Testimonials from "./components/Testimonials";
 
 export default function App() {
   return (
@@ -23,7 +24,9 @@ export default function App() {
       <section id="experience">
         <Experience />
       </section>
-      <section id="portfolio"></section>
+      <section id="testimonials">
+        <Testimonials />
+      </section>
       <Footer />
     </div>
   );

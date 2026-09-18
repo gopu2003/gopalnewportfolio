@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 const paragraphs = [
   "Editor by craft. Storyteller by instinct.",
@@ -10,36 +11,77 @@ const paragraphs = [
 const BG_IMAGE =
   "https://res.cloudinary.com/xjo36sha/image/upload/v1789658540/WhatsApp_Image_2026-09-17_at_7.16.55_PM.jpg";
 
-export default function AboutCard() {
+function AboutText() {
   return (
-    <section className="relative isolate overflow-hidden">
-      <div
-        className="absolute inset-0 -z-20 scale-105 bg-cover bg-center"
-        style={{ backgroundImage: `url(${BG_IMAGE})` }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
-      <div className="grain-overlay absolute inset-0 -z-10" />
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-center gap-8 px-6 text-center"
+    >
+      {paragraphs.map((p, i) => (
+        <p
+          key={i}
+          className={
+            i === 0
+              ? "font-[Playfair_Display] text-3xl italic font-semibold leading-snug tracking-tight text-white md:text-5xl [text-wrap:balance]"
+              : "font-[Inter] text-base leading-relaxed text-white/70 md:text-lg"
+          }
+        >
+          {p}
+        </p>
+      ))}
+    </motion.div>
+  );
+}
 
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mx-auto flex min-h-[80vh] max-w-4xl flex-col justify-center gap-8 px-6 py-28 text-center"
-      >
-        {paragraphs.map((p, i) => (
-          <p
-            key={i}
-            className={
-              i === 0
-                ? "font-[Playfair_Display] text-3xl italic font-semibold leading-snug tracking-tight text-white md:text-5xl [text-wrap:balance]"
-                : "font-[Inter] text-base leading-relaxed text-white/70 md:text-lg"
-            }
-          >
-            {p}
-          </p>
-        ))}
-      </motion.div>
+export default function AboutCard() {
+  const wrapperRef = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
+
+  // Progress 0 = section just starting to enter from the bottom of the viewport.
+  // Progress 1 = section top reaches the viewport top (i.e. fully pinned/on-screen).
+  // Zooming across this entry window means the image is already full-bleed by the
+  // time the section takes over the screen, instead of zooming while being read.
+  const { scrollYProgress } = useScroll({
+    target: wrapperRef,
+    offset: ["start end", "start start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const radius = useTransform(scrollYProgress, [0, 1], [32, 0]);
+
+  if (prefersReducedMotion) {
+    return (
+      <section className="relative isolate min-h-[100vh] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${BG_IMAGE})` }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
+        <div className="grain-overlay pointer-events-none absolute inset-0" />
+        <AboutText />
+      </section>
+    );
+  }
+
+  return (
+    <section ref={wrapperRef} className="relative isolate" style={{ height: "220vh" }}>
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <motion.div
+          className="absolute inset-0 overflow-hidden"
+          style={{ scale, borderRadius: radius }}
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${BG_IMAGE})` }}
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
+          <div className="grain-overlay pointer-events-none absolute inset-0" />
+        </motion.div>
+        <AboutText />
+      </div>
     </section>
   );
 }

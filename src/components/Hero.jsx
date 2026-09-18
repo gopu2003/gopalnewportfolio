@@ -35,58 +35,58 @@ function Sticker({ src, label, className, rotate = 0, fit = "contain", zoom = 1,
 
 export default function Hero() {
   return (
-    <div className="relative hero-grid-bg overflow-hidden w-full h-[85vh] min-h-[600px]">
+    <div className="relative hero-grid-bg overflow-hidden w-full h-[100vh] min-h-[820px] md:min-h-[880px]">
       <Sticker
         src={heroImages.cautionSign}
         label="Caution sign"
         rotate={-12}
-        className="left-[-2%] top-[18%] w-[28%] h-[68%] hidden md:block"
+        className="left-[0%] top-[16%] w-[24%] h-[60%] hidden md:block"
       />
       <Sticker
         src={heroImages.photo}
         label="Photo"
-        rotate={-8}
+        rotate={-20}
         rounded
-        className="left-[27%] top-[1%] w-[16%] h-[27%] hidden md:block"
+        className="left-[25%] top-[3%] w-[12%] h-[22%] hidden md:block"
       />
       <Sticker
         src={heroImages.computer}
         label="Computer"
-        className="left-[35%] top-[8%] w-[34%] h-[62%] hidden md:block"
+        className="left-[33%] top-[11%] w-[28%] h-[48%] hidden md:block"
       />
       <Sticker
         src={heroImages.coffee}
         label="Coffee"
-        className="left-[23.5%] top-[41%] w-[12%] h-[17%] hidden md:block"
+        className="left-[22.5%] top-[38%] w-[10%] h-[14%] hidden md:block"
       />
       <Sticker
         src={heroImages.cabinet}
         label="Cabinet"
-        className="left-[64.5%] top-[-8.4%] w-[61%] h-[33%] hidden md:block"
+        className="left-[83%] top-[-5%] w-[14%] h-[25%] hidden md:block"
       />
       <Sticker
         src={heroImages.nameTag}
         label="Name tag"
         rotate={-3}
-        className="left-[68.4%] top-[26.4%] w-[18.2%] h-[18.2%] hidden md:block"
+        className="left-[68%] top-[24%] w-[20%] h-[19%] hidden md:block"
       />
       <Sticker
         src={heroImages.notepad}
         label="Notepad"
         rotate={2}
-        className="left-[80.8%] top-[54.8%] w-[14.4%] h-[26.4%] hidden md:block"
+        className="left-[85%] top-[39%] w-[10%] h-[21%] hidden md:block"
       />
       <Sticker
         src={heroImages.welcomeMat}
         label="Welcome mat"
-        className="left-[8.9%] top-[60%] w-[80.2%] h-[55.6%] hidden md:block"
+        className="left-[33%] bottom-[4%] w-[30%] aspect-[2.3/2] hidden md:block"
       />
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="absolute left-[4%] right-[4%] top-[44%] md:left-[69%] md:right-[2%] md:top-[44%] flex flex-col gap-3"
+        className="absolute left-[4%] right-[4%] top-[44%] md:left-[66%] md:right-[3%] md:top-[46%] flex flex-col gap-3"
       >
         <div className="flex items-center gap-2 text-xs text-black/60">
           <span className="rounded-full bg-black/5 border border-black/10 px-3 py-1">

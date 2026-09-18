@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { email, phone, instagram } from "../data/profile.json";
+import { email, phone, instagram, resumeLink } from "../data/profile.json";
 
 const links = [
   { href: "#about", label: "About" },
   { href: "#craft", label: "Craft" },
   { href: "#experience", label: "Experience" },
-  { href: "#portfolio", label: "Portfolio" },
+  { href: resumeLink, label: "Portfolio", external: true },
 ];
 
 function MailIcon() {
@@ -68,6 +68,8 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
               className="text-sm font-medium text-black/60 transition-colors hover:text-black"
             >
               {link.label}
@@ -124,6 +126,8 @@ export default function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noreferrer" : undefined}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-2 py-2.5 text-base font-medium text-black/70 hover:bg-black/5 hover:text-black"
                 >

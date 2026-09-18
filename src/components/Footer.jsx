@@ -1,4 +1,4 @@
-import { email, phone, instagram, location } from "../data/profile.json";
+import { email, phone, instagram, location, resumeLink } from "../data/profile.json";
 
 function ArrowIcon() {
   return (
@@ -12,7 +12,7 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#craft", label: "Craft" },
   { href: "#experience", label: "Experience" },
-  { href: "#portfolio", label: "Portfolio" },
+  { href: resumeLink, label: "Portfolio", external: true },
 ];
 
 export default function Footer() {
@@ -55,7 +55,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-white/60 hover:text-white">
+                  <a
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noreferrer" : undefined}
+                    className="text-sm text-white/60 hover:text-white"
+                  >
                     {link.label}
                   </a>
                 </li>
